@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html { 
+    
+}
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: url(./images/wather-bcg.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+#app {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 300px;
+}
+#days{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.single-day {
+    margin: 5px;
+    border: 1px solid white;
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 100px;
+    box-sizing: border-box;
+
+}
+
+.single-day-res {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    width: 200px;
+    height: 100%;
+}
+
+.single-day-res p{
+    margin-bottom: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.res-day{
+    font-size: 35px;
+}
+.res-temp{
+    font-size: 25px;
+}
+.res-direction{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.res-speed{
+    font-size: 20px;
+}
+.res-type{
+    font-size: 25px;
+    text-transform: capitalize;
+}
+
+.res-direction::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -20px;
+    width: 15px;
+    height: 15px;
+}
+
+.north-east::before {    
+    background: url(./images/north-east.svg) no-repeat center;
+}
+
+.north-west::before {    
+    background: url(./images/north-west.svg) no-repeat center;
+}
+
+.south-east::before {    
+    background: url(./images/south-east.svg) no-repeat center;
+}

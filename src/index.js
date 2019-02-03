@@ -58,7 +58,7 @@ let days = document.getElementById("days"),
 singleDay = document.getElementById("singleDay"),
 html = ` ${weatherData.days.map(
     item => `
-            <div onclick="changeDay('${item.day}')">
+            <div class="single-day" onclick="changeDay('${item.day}')">
                 <span id="day">${item.day}</span>
                 <span>${item.temp}</span>
             </div>
@@ -72,12 +72,12 @@ window.changeDay = function(item) {
 
     singleDay.innerHTML = `${result.map(
         item => `
-            <div>
-                <span id="day">${item.day}</span>
-                <span>${item.temp}</span>
-                <span class="${item.windDirection}">${item.windDirection}</span>
-                <span>${item.windSpeed}</span>
-                <span>${item.type}</span>
+            <div class="single-day-res">
+                <p id="day" class="res-day">${item.day}</p>
+                <p class="res-temp">${item.temp} ${weatherData.tempUnit}</p>
+                <p class="${item.windDirection} res-direction">${item.windDirection}</p>
+                <p class="res-speed">${item.windSpeed} ${weatherData.windSpeedUnit}</p>
+                <p class="res-type">${item.type}</p>
             </div>
         `
     ).join("")}`;
